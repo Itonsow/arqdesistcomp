@@ -104,10 +104,10 @@ exit1:
     jr   $ra
 
 swap:
-    sll  $t1, $a1, 2           # offset = idx*4
-    add  $t2, $a0, $t1         # &ARR[idx]
-    lw   $t3, 0($t2)           # a = ARR[idx]
-    lw   $t4, 4($t2)           # b = ARR[idx+1]
-    sw   $t4, 0($t2)           # ARR[idx]   = b
-    sw   $t3, 4($t2)           # ARR[idx+1] = a
+    sll  $t1, $a1, 2
+    add  $t2, $a0, $t1
+    lw   $t3, 0($t2)
+    lw   $t4, 4($t2)
+    sw   $t4, 0($t2)
+    sw   $t3, 4($t2)
     jr   $ra
